@@ -2,7 +2,12 @@
   "name": "javascript-development-environment",
   "version": "1.0.0",
   "description": "A JavaScript development environment Starter-Kit",
-  "scripts": {},
+  "scripts": {
+    "prestart": "node buildScripts/startMessage",
+    "start": "npm-run-all --parallel open:src share ",
+    "open:src": "node buildScripts/srcServer",
+    "share": "lt --port 3000 --subdomain somoye"
+  },
   "author": "Somoye Ayotunde",
   "license": "MIT",
   "dependencies": {},
